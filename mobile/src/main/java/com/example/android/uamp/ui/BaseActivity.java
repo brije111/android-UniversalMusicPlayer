@@ -149,7 +149,6 @@ public abstract class BaseActivity extends ActionBarCastActivity implements Medi
         MediaControllerCompat mediaController = new MediaControllerCompat(this, token);
         setSupportMediaController(mediaController);
         mediaController.registerCallback(mMediaControllerCallback);
-
         if (shouldShowControls()) {
             showPlaybackControls();
         } else {
@@ -157,11 +156,9 @@ public abstract class BaseActivity extends ActionBarCastActivity implements Medi
                 "hiding controls because metadata is null");
             hidePlaybackControls();
         }
-
         if (mControlsFragment != null) {
             mControlsFragment.onConnected();
         }
-
         onMediaControllerConnected();
     }
 

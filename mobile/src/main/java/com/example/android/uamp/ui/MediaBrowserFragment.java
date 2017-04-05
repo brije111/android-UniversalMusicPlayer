@@ -320,5 +320,4 @@ public class MediaBrowserFragment extends Fragment {
         void onMediaItemSelected(MediaBrowserCompat.MediaItem item);
         void setToolbarTitle(CharSequence title);
     }
-
 }

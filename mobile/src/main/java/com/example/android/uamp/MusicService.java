@@ -134,10 +134,8 @@ public class MusicService extends MediaBrowserServiceCompat implements
     public static final String CMD_STOP_CASTING = "CMD_STOP_CASTING";
     // Delay stopSelf by using a handler.
     private static final int STOP_DELAY = 30000;
-
     private MusicProvider mMusicProvider;
     private PlaybackManager mPlaybackManager;
-
     private MediaSessionCompat mSession;
     private MediaNotificationManager mMediaNotificationManager;
     private Bundle mSessionExtras;
@@ -146,7 +144,6 @@ public class MusicService extends MediaBrowserServiceCompat implements
     private PackageValidator mPackageValidator;
     private SessionManager mCastSessionManager;
     private SessionManagerListener<CastSession> mCastSessionManagerListener;
-
     private boolean mIsConnectedToCar;
     private BroadcastReceiver mCarConnectionReceiver;
 
@@ -197,7 +194,6 @@ public class MusicService extends MediaBrowserServiceCompat implements
         LocalPlayback playback = new LocalPlayback(this, mMusicProvider);
         mPlaybackManager = new PlaybackManager(this, getResources(), mMusicProvider, queueManager,
                 playback);
-
         // Start a new MediaSession
         mSession = new MediaSessionCompat(this, "MusicService");
         setSessionToken(mSession.getSessionToken());
